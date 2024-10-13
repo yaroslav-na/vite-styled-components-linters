@@ -44,6 +44,10 @@
     "vite": "^5.4.8"
   },
   "lint-staged": {
-    "*": "stylelint --fix \"./src/**/*.{css,ts,tsx}\" && prettier . --write && eslint ."
+    "./src/*": [
+      "stylelint --fix \"./src/**/*.{css,ts,tsx}\"",
+      "prettier ./src/ --write",
+      "eslint --fix ./src/"
+    ]
   }
 }
